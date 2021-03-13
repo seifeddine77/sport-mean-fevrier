@@ -1,0 +1,28 @@
+<div class="widget-next-match">
+    <table class="table custom-table">
+      <thead>
+        <tr>
+           <th>Id</th>
+          <th>name</th>
+          <th>formation</th>
+          <th>stadium</th>
+          <th>country</th> 
+        </tr>
+      </thead>
+      <tbody>
+       <tr *ngFor='let t of teams'>
+        <td>{{t.id}}</td>
+        <td>{{t.name}}</td>
+        <td>{{t.country}}</td>
+        <td>{{t.foundation}}</td>
+        <td>{{t.stadium}}</td>
+        <td>
+        <button  class='btn btn-success'(click)="goToTeam(t.id)" >display</button>
+        <button  class='btn btn-info'>edit</button>
+        <button  class='btn btn-danger'>delete</button>
+    </td>
+
+
+       
+       </tr>
+       </tbody>

@@ -1,0 +1,29 @@
+
+    <table class="table custom-table">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>poste</th>
+          <th>numero</th>
+          <th>age</th>
+          <th>description</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let p of players'>
+         <td>{{p._id}}</td>
+         <td>{{p.name}}</td>
+         <td>{{p.poste}}</td>
+         <td>{{p.age}}</td>
+         <td>{{p.description}}</td>
+         <td>
+         <button  class='btn btn-success' (click)="goToPlayer(p._id)">display</button>
+         <button  class='btn btn-info' (click)="editPlayer(p._id)">edit</button>
+         <button  class='btn btn-danger' (click)="deletePlayer(p._id)">delete</button>
+     </td>
+ 
+ 
+        
+        </tr>
+        </tbody>

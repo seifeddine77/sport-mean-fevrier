@@ -1,0 +1,78 @@
+
+  
+      <div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-9 mx-auto text-center">
+              <h1 class="text-white">SignUP
+      
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="site-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <form [formGroup]="signupForm">
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName='firstName' placeholder="first name">
+                </div>
+                <div *ngIf="signupForm.controls['firstName'].invalid && (signupForm.controls['firstName'].dirty ||
+                signupForm.controls['firstName'].touched)">
+                <div *ngIf="signupForm.controls['firstName'].errors.required" style="color: red;">First name is required</div>
+                <div *ngIf="signupForm.controls['firstName'].errors.minlength" style="color: red;">first name must have at least 3 characters</div>
+              </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName='lastName' placeholder="Lastname">
+                </div>
+                <div *ngIf="signupForm.controls['lastName'].invalid && (signupForm.controls['lastName'].dirty ||
+                signupForm.controls['lastName'].touched)">
+                <div *ngIf="signupForm.controls['lastName'].errors.required" style="color: red;">last name is required</div>
+                <div *ngIf="signupForm.controls['lasttName'].errors.minlength" style="color: red;">lastName  must have at least 5 characters</div>
+              </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName='email' placeholder="Email">
+                  <div class="form-group">
+                    <input type="text" class="form-control" formControlName='pwd' placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                 
+                  <div class="form-group">
+                    <input type="text" class="form-control" formControlName='confirmPwd' placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary py-3 px-5"  (click)="signup(signupForm.value)">SignUP</button>
+                </div>
+              </form>  
+            </div>
+            <div class="col-lg-4 ml-auto">
+              
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <strong class="text-white d-block">Address</strong>
+                    273 South Riverview Rd. <br> New York, NY 10011
+                  </li>
+                  <li class="mb-2">
+                    <strong class="text-white d-block">Email</strong>
+                    <a href="#">info@unslate.co</a>
+                  </li>
+                  <li class="mb-2">
+                    <strong class="text-white d-block">
+                      Phone
+                    </strong>
+                    <a href="#">+12 345 6789 012</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+  
+     
